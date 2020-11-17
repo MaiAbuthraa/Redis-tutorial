@@ -70,3 +70,12 @@ Test if Redis server is running.
 // Pong
 
 
+
+Side Note, for me
+Ubuntu:
+```
+cd /lib/systemd/system
+I will find redis-server.service
+
+```
+
