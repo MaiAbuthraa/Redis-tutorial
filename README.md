@@ -30,6 +30,9 @@ Stop Redis server:
 Restart Redis server:
 > brew services restart redis
 
+Shutdown
+> redis-cli shutdown
+
 #### On Ubuntu
 To install Redis on Ubuntu, it’s a lot of works to do, check this link
 [Install Redis on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04)
@@ -46,5 +49,24 @@ To restart Redis server:
 
 To stop Redis server:
 > sudo systemctl stop redis
+
+OR:
+
+> /etc/init.d/redis-server start
+> /etc/init.d/redis-server restart
+> /etc/init.d/redis-server stop
+
+On modern Ubuntu:
+> sudo service redis-server start|run redis  
+> sudo service redis-server restart 
+> sudo service redis-server stop 
+
+list all `redis-server` process 
+> ps aux | grep redis-server
+
+#### CLI
+Test if Redis server is running.
+> redis-cli ping
+// Pong
 
 
