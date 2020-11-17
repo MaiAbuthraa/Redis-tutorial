@@ -69,11 +69,42 @@ Test if Redis server is running.
 > redis-cli ping
 // Pong
 
+> redis-cli
+
+Print message
+> ECHO "wirte your message"
+
+Set variable
+> SET foo 100 // OK
+
+Get variable
+> GET foo 100 // "100"
+
+Increment number:
+> INCR foo // (integer) 101
+
+Decrement number:
+> DECR foo // (integer) 100
+
+Check existing:
+> EXISTS foo // 1 if yes, 0 if no
+
+Delete the variable
+> DEL foo
+then if you call get
+> GET foo 100 // (nil)
+> EXISTS foo //  0 
+
+Delete all the variables
+> FLUSHALL
+
+
 
 
 Side Note, for me
 Ubuntu:
 ```
+
 cd /lib/systemd/system
 I will find redis-server.service
 
