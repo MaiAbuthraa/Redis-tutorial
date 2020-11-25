@@ -64,7 +64,7 @@ On modern Ubuntu:
 list all `redis-server` process 
 > ps aux | grep redis-server
 
-#### CLI
+#### 2- CLI
 Test if Redis server is running.
 > redis-cli ping
 // Pong
